@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2838369580581496420}
   m_Layer: 0
   m_Name: Bloque_Madera
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
