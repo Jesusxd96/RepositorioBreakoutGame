@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jugador : MonoBehaviour
 {
     [SerializeField] private int limiteX = 23;
-    [SerializeField] private float VelocidadPaddle = 15f;
+    [SerializeField] private float paddleSpeed = 15f;
     Vector3 mousePos2D;
     Vector3 mousePos3D;
     // Start is called before the first frame update
@@ -27,14 +27,17 @@ public class Jugador : MonoBehaviour
         mousePos2D.z = -Camera.main.transform.position.z;
         mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
         */
+        /*
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(Vector3.down * VelocidadPaddle * Time.deltaTime);
+            transform.Translate(Vector3.down * paddleSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector3.up * VelocidadPaddle * Time.deltaTime);
-        }
+            transform.Translate(Vector3.up * paddleSpeed * Time.deltaTime);
+        }*/
+
+        transform.Translate(Input.GetAxis("Horizontal") * Vector3.down * paddleSpeed * Time.deltaTime);
 
         Vector3 pos = transform.position;
         //pos.x = mousePos3D.x;

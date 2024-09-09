@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8487703266083127002}
   - component: {fileID: 5701857473165653681}
   - component: {fileID: 6418873260289308334}
+  - component: {fileID: 5821838578772966513}
   m_Layer: 0
   m_Name: Bola
   m_TagString: Ball
@@ -108,7 +109,21 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 3
+  m_CollisionDetection: 0
+--- !u!114 &5821838578772966513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543569032322569322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffa1560570745f4f8788c28afdb9791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGameStarted: 0
+  ballSpeed: 10
