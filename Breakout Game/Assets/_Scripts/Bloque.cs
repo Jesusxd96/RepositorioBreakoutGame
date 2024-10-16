@@ -7,7 +7,7 @@ public class Bloque : MonoBehaviour
     public int resistencia = 1;
     public UnityEvent AumentarPuntaje;
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ball")
         {
@@ -25,13 +25,17 @@ public class Bloque : MonoBehaviour
     {
         if (resistencia == 0)
         {
+            AumentarPuntaje.Invoke();
             Destroy(this.gameObject);
         }
     }
     /*Polimorfismo incoming*/
     public virtual void RebotarBola(Collision col)
     {
-        //throw new NotImplementedException();
+        Vector3 direccion = col.contacts[0].point - transform.position;
+        direccion = direccion.normalized;
+        col.rigidbody.velocity = col.gameObject.GetComponent<Bola>().ballSpeed * direccion;
+        resistencia--;
     }
     //La palabra Virtual nos ayuda para hacer la sobrecarga de metodos
     public virtual void RebotarBola()

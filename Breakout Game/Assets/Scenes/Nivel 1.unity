@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -760,6 +761,27 @@ MonoBehaviour:
   highScore_Text: {fileID: 0}
   score_Text: {fileID: 0}
   puntajeAltoSO: {fileID: 11400000, guid: b281162ad4646a044ae45c122639e029, type: 2}
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934a4339543906847b0f00a55785fc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: 1
+  mantenerEnPantalla: 0
+  estaEnPantalla: 1
+  anchoCamara: 0
+  altoCamara: 0
+  salioDerecha: 0
+  salioIzquierda: 0
+  salioArriba: 0
+  salioAbajo: 0
 --- !u!1 &1001930164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bola
       objectReference: {fileID: 0}
+    - target: {fileID: 5821838578772966513, guid: febb12042c045784d95372f44f438596, type: 3}
+      propertyPath: ballSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5859475845639288176, guid: febb12042c045784d95372f44f438596, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1082,6 +1108,10 @@ PrefabInstance:
     - target: {fileID: 5859475845639288176, guid: febb12042c045784d95372f44f438596, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528895607392040988, guid: febb12042c045784d95372f44f438596, type: 3}
+      propertyPath: radio
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: febb12042c045784d95372f44f438596, type: 3}
