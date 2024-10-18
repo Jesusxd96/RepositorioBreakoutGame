@@ -6,14 +6,24 @@ public class Jugador : MonoBehaviour
 {
     [SerializeField] private int limiteX = 23;
     [SerializeField] private float paddleSpeed = 15f;
+
+    Transform transform;
     Vector3 mousePos2D;
     Vector3 mousePos3D;
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform = this.gameObject.transform;
     }
-
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Ball")
+        {
+            Vector3 direccion = col.contacts[0].point - transform.position;
+            direccion = direccion.normalized;
+            col.rigidbody.velocity = col.gameObject.GetComponent<Bola>().ballSpeed * direccion;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

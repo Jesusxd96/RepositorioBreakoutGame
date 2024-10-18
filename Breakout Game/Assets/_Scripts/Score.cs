@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
 
     private void FixedUpdate()
     {
-        puntajeAltoSO.puntaje += 50;
+        
     }
 
     // Update is called once per frame
@@ -44,5 +44,8 @@ public class Score : MonoBehaviour
             //PlayerPrefs.SetInt("highScore", score);
         }
     }
-
+    public void AumentarPuntaje(int puntos)
+    {
+        puntajeAltoSO.puntaje += puntos;
+    }
 }
