@@ -21,6 +21,7 @@ public class Bola : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isGameStarted = false;
         Vector3 posicionInicial = GameObject.FindGameObjectWithTag("Player").transform.position;
         posicionInicial.y += 3;
         this.transform.position = posicionInicial;
