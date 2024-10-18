@@ -13,6 +13,8 @@ public class Bola : MonoBehaviour
     private ControlBordes control;
     public UnityEvent BolaDestruida;
 
+    public Opciones opciones;
+
     private void Awake()
     {
         control = GetComponent<ControlBordes>();
@@ -33,6 +35,7 @@ public class Bola : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ballSpeed = opciones.velocidadBola;
         //ControlDeDireccion();
         if (control.salioAbajo)
         {

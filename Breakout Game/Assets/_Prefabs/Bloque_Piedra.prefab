@@ -129,3 +129,4 @@ MonoBehaviour:
   AumentarPuntaje:
     m_PersistentCalls:
       m_Calls: []
+  opciones: {fileID: 11400000, guid: d95b770f5c88ce744ba65472f7865748, type: 2}

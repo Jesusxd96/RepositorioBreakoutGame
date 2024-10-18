@@ -7,6 +7,8 @@ public class Bloque : MonoBehaviour
     public int resistencia = 1;
     public UnityEvent AumentarPuntaje;
 
+    public Opciones opciones;
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ball")
@@ -17,7 +19,8 @@ public class Bloque : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //opciones = FindObjectOfType<Opciones>();
+        NuevaResistencia((int)opciones.nivelDificultad);//Se toma el numero de la dificultad y se manda
     }
 
     // Update is called once per frame
@@ -42,5 +45,15 @@ public class Bloque : MonoBehaviour
     {
 
     }
-    
+    public void NuevaResistencia(int i)//Se mandara de inicio la posicion del enum
+    {
+        switch (i){
+            case 1:resistencia += 1;//Normal, solo se le agrega 1 resistencia a los bloques
+                break;
+            case 2: resistencia *= 2;//Se duplica el valor, es dificil
+                break;
+            default: resistencia *= 1;//Default es 0, osea facil deberia ser, no cambian
+                break;
+        }
+    }
 }
